@@ -76,9 +76,46 @@ def inject_css():
                 background-attachment: fixed;
             }
 
-            /* Hide Default Streamlit Elements */
-            header[data-testid="stHeader"] { background: transparent !important; }
-            #MainMenu, footer, header, div[data-testid="stDecoration"] { visibility: hidden; display: none; }
+            /* Sidebar & Header Toggle Controls Fix */
+            header[data-testid="stHeader"] {
+                background: transparent !important;
+                z-index: 999999 !important;
+            }
+
+            [data-testid="stSidebarCollapsedControl"] {
+                display: flex !important;
+                visibility: visible !important;
+                z-index: 999999 !important;
+                top: 0.75rem !important;
+                left: 0.75rem !important;
+            }
+
+            [data-testid="stSidebarCollapsedControl"] button,
+            button[data-testid="stSidebarCollapseButton"],
+            button[data-testid="baseButton-header"] {
+                background: rgba(30, 41, 59, 0.85) !important;
+                border: 1px solid rgba(99, 102, 241, 0.4) !important;
+                color: #a5b4fc !important;
+                border-radius: 10px !important;
+                backdrop-filter: blur(12px) !important;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+                transition: all 0.2s ease !important;
+            }
+
+            [data-testid="stSidebarCollapsedControl"] button:hover,
+            button[data-testid="stSidebarCollapseButton"]:hover,
+            button[data-testid="baseButton-header"]:hover {
+                background: rgba(99, 102, 241, 0.25) !important;
+                color: #ffffff !important;
+                border-color: #6366f1 !important;
+                transform: scale(1.05) !important;
+            }
+
+            /* Hide Default Streamlit Branding Elements */
+            #MainMenu, footer, div[data-testid="stDecoration"] {
+                visibility: hidden;
+                display: none;
+            }
 
             .main .block-container {
                 padding: 1.75rem 2rem 3rem !important;
