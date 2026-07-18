@@ -80,35 +80,57 @@ def inject_css():
             header[data-testid="stHeader"] {
                 background: transparent !important;
                 z-index: 999999 !important;
+                pointer-events: auto !important;
             }
 
-            [data-testid="stSidebarCollapsedControl"] {
+            [data-testid="stSidebarCollapsedControl"],
+            [data-testid="stSidebarCollapseButton"],
+            button[aria-label="Expand sidebar"],
+            button[aria-label="Collapse sidebar"],
+            button[kind="header"] {
                 display: flex !important;
                 visibility: visible !important;
+                opacity: 1 !important;
                 z-index: 999999 !important;
-                top: 0.75rem !important;
-                left: 0.75rem !important;
+                pointer-events: auto !important;
             }
 
             [data-testid="stSidebarCollapsedControl"] button,
             button[data-testid="stSidebarCollapseButton"],
-            button[data-testid="baseButton-header"] {
-                background: rgba(30, 41, 59, 0.85) !important;
-                border: 1px solid rgba(99, 102, 241, 0.4) !important;
-                color: #a5b4fc !important;
+            button[data-testid="baseButton-header"],
+            button[aria-label="Expand sidebar"],
+            button[aria-label="Collapse sidebar"] {
+                background: rgba(30, 41, 59, 0.95) !important;
+                border: 1px solid rgba(99, 102, 241, 0.6) !important;
+                color: #ffffff !important;
                 border-radius: 10px !important;
+                padding: 6px 10px !important;
                 backdrop-filter: blur(12px) !important;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+                box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35) !important;
                 transition: all 0.2s ease !important;
+                visibility: visible !important;
+                opacity: 1 !important;
             }
 
             [data-testid="stSidebarCollapsedControl"] button:hover,
             button[data-testid="stSidebarCollapseButton"]:hover,
-            button[data-testid="baseButton-header"]:hover {
-                background: rgba(99, 102, 241, 0.25) !important;
+            button[aria-label="Expand sidebar"]:hover,
+            button[aria-label="Collapse sidebar"]:hover {
+                background: rgba(99, 102, 241, 0.4) !important;
                 color: #ffffff !important;
-                border-color: #6366f1 !important;
-                transform: scale(1.05) !important;
+                border-color: #a855f7 !important;
+                transform: scale(1.08) !important;
+            }
+
+            [data-testid="stSidebarCollapsedControl"] svg,
+            button[aria-label="Expand sidebar"] svg,
+            button[aria-label="Collapse sidebar"] svg,
+            button[data-testid="stSidebarCollapseButton"] svg {
+                fill: #ffffff !important;
+                color: #ffffff !important;
+                stroke: #ffffff !important;
+                visibility: visible !important;
+                opacity: 1 !important;
             }
 
             /* Hide Default Streamlit Branding Elements */
