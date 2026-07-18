@@ -29,11 +29,11 @@ def inject_css():
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
         <style>
+            /* High Performance Dark SaaS Design Tokens */
             :root {
                 --bg-dark: #070913;
-                --bg-surface: rgba(15, 23, 42, 0.75);
-                --bg-glass-card: rgba(30, 41, 59, 0.5);
-                --bg-glass-hover: rgba(51, 65, 85, 0.6);
+                --bg-surface: #0e1628;
+                --bg-glass-card: #131c31;
                 --border-glass: rgba(255, 255, 255, 0.08);
                 --border-glow: rgba(99, 102, 241, 0.35);
                 
@@ -53,94 +53,28 @@ def inject_css():
                 --text-muted: #94a3b8;
                 --text-dim: #64748b;
                 
-                --radius-lg: 20px;
-                --radius-md: 14px;
-                --radius-sm: 10px;
-                
-                --shadow-glow: 0 0 25px -5px rgba(99, 102, 241, 0.25);
+                --radius-lg: 18px;
+                --radius-md: 12px;
+                --radius-sm: 8px;
             }
 
-            /* Global Reset & Typography */
+            /* Global Typography & Fast Theme */
             html, body, [class*="css"] {
                 font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
                 color: var(--text-main) !important;
             }
 
-            /* App Background with Radial Ambient Glows */
             .stApp {
                 background-color: var(--bg-dark);
-                background-image: 
-                    radial-gradient(circle at 12% 15%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
-                    radial-gradient(circle at 88% 80%, rgba(6, 182, 212, 0.12) 0%, transparent 45%),
-                    radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.06) 0%, transparent 60%);
-                background-attachment: fixed;
             }
 
-            /* Sidebar & Header Toggle Controls Fix */
+            /* Native Streamlit Header Integration */
             header[data-testid="stHeader"] {
                 background: transparent !important;
-                height: 3.5rem !important;
-                min-height: 3.5rem !important;
-                overflow: visible !important;
-                z-index: 999999 !important;
-                pointer-events: auto !important;
             }
 
-            [data-testid="stSidebarCollapsedControl"],
-            [data-testid="stSidebarCollapseButton"],
-            button[aria-label="Expand sidebar"],
-            button[aria-label="Collapse sidebar"],
-            button[kind="header"] {
-                display: flex !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-                position: fixed !important;
-                top: 0.85rem !important;
-                left: 0.85rem !important;
-                z-index: 999999 !important;
-                pointer-events: auto !important;
-            }
-
-            [data-testid="stSidebarCollapsedControl"] button,
-            button[data-testid="stSidebarCollapseButton"],
-            button[data-testid="baseButton-header"],
-            button[aria-label="Expand sidebar"],
-            button[aria-label="Collapse sidebar"] {
-                background: rgba(30, 41, 59, 0.95) !important;
-                border: 1px solid rgba(99, 102, 241, 0.6) !important;
-                color: #ffffff !important;
-                border-radius: 10px !important;
-                padding: 6px 12px !important;
-                backdrop-filter: blur(12px) !important;
-                box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4) !important;
-                transition: all 0.2s ease !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-            }
-
-            [data-testid="stSidebarCollapsedControl"] button:hover,
-            button[data-testid="stSidebarCollapseButton"]:hover,
-            button[aria-label="Expand sidebar"]:hover,
-            button[aria-label="Collapse sidebar"]:hover {
-                background: rgba(99, 102, 241, 0.4) !important;
-                color: #ffffff !important;
-                border-color: #a855f7 !important;
-                transform: scale(1.08) !important;
-            }
-
-            [data-testid="stSidebarCollapsedControl"] svg,
-            button[aria-label="Expand sidebar"] svg,
-            button[aria-label="Collapse sidebar"] svg,
-            button[data-testid="stSidebarCollapseButton"] svg {
-                fill: #ffffff !important;
-                color: #ffffff !important;
-                stroke: #ffffff !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-            }
-
-            /* Hide Default Streamlit Branding Elements */
-            #MainMenu, footer, div[data-testid="stDecoration"] {
+            /* Hide Streamlit Footer & Top Color Bar only */
+            footer, div[data-testid="stDecoration"] {
                 visibility: hidden;
                 display: none;
             }
@@ -150,10 +84,9 @@ def inject_css():
                 max-width: 1240px !important;
             }
 
-            /* Sidebar Customization */
+            /* Fast Dark Sidebar */
             section[data-testid="stSidebar"] {
-                background: rgba(11, 15, 25, 0.82) !important;
-                backdrop-filter: blur(20px) !important;
+                background: #0b0f19 !important;
                 border-right: 1px solid var(--border-glass) !important;
             }
 
