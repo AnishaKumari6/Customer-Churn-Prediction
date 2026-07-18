@@ -3,7 +3,7 @@
 This project is an end-to-end machine learning system that predicts customer churn and suggests retention actions.
 
 ## 🚀 Live Demo
-https://willmycustomerchurn.streamlit.app/
+
 
 ## 📊 Problem
 Businesses lose revenue when customers churn. This project predicts churn probability and recommends actions.
