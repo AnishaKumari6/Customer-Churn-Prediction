@@ -73,52 +73,6 @@ def inject_css():
                 background: transparent !important;
             }
 
-            /* Streamlit 1.59 Sidebar Collapse & Expand Toggle Controls */
-            [data-testid="collapsedControl"],
-            [data-testid="stSidebarCollapsedControl"],
-            [data-testid="stSidebarCollapseButton"],
-            button[data-testid="stSidebarCollapseButton"],
-            button[aria-label="Expand sidebar"],
-            button[aria-label="Collapse sidebar"] {
-                display: flex !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-                position: fixed !important;
-                top: 0.75rem !important;
-                left: 0.75rem !important;
-                z-index: 9999999 !important;
-                pointer-events: auto !important;
-            }
-
-            [data-testid="collapsedControl"] button,
-            [data-testid="stSidebarCollapsedControl"] button,
-            button[data-testid="stSidebarCollapseButton"],
-            button[aria-label="Expand sidebar"],
-            button[aria-label="Collapse sidebar"] {
-                background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
-                border: 1px solid #a855f7 !important;
-                color: #ffffff !important;
-                border-radius: 10px !important;
-                padding: 8px 12px !important;
-                box-shadow: 0 0 20px rgba(99, 102, 241, 0.7) !important;
-                cursor: pointer !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-            }
-
-            [data-testid="collapsedControl"] svg,
-            [data-testid="stSidebarCollapsedControl"] svg,
-            button[aria-label="Expand sidebar"] svg,
-            button[aria-label="Collapse sidebar"] svg {
-                fill: #ffffff !important;
-                color: #ffffff !important;
-                stroke: #ffffff !important;
-                width: 20px !important;
-                height: 20px !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-            }
-
             /* Hide Streamlit Footer & Top Color Bar only */
             footer, div[data-testid="stDecoration"] {
                 visibility: hidden;
