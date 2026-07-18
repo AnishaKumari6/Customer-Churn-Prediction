@@ -73,6 +73,30 @@ def inject_css():
                 background: transparent !important;
             }
 
+            /* Always Visible Sidebar Toggle Button */
+            [data-testid="stSidebarCollapsedControl"] {
+                display: block !important;
+                visibility: visible !important;
+                z-index: 99999 !important;
+            }
+
+            [data-testid="stSidebarCollapsedControl"] button,
+            button[data-testid="stSidebarCollapseButton"] {
+                background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
+                border: 1px solid #a855f7 !important;
+                color: #ffffff !important;
+                border-radius: 8px !important;
+                box-shadow: 0 0 15px rgba(99, 102, 241, 0.6) !important;
+                padding: 4px 8px !important;
+            }
+
+            [data-testid="stSidebarCollapsedControl"] button *,
+            button[data-testid="stSidebarCollapseButton"] * {
+                fill: #ffffff !important;
+                color: #ffffff !important;
+                stroke: #ffffff !important;
+            }
+
             /* Hide Streamlit Footer & Top Color Bar only */
             footer, div[data-testid="stDecoration"] {
                 visibility: hidden;
