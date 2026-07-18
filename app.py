@@ -79,6 +79,9 @@ def inject_css():
             /* Sidebar & Header Toggle Controls Fix */
             header[data-testid="stHeader"] {
                 background: transparent !important;
+                height: 3.5rem !important;
+                min-height: 3.5rem !important;
+                overflow: visible !important;
                 z-index: 999999 !important;
                 pointer-events: auto !important;
             }
@@ -91,6 +94,9 @@ def inject_css():
                 display: flex !important;
                 visibility: visible !important;
                 opacity: 1 !important;
+                position: fixed !important;
+                top: 0.85rem !important;
+                left: 0.85rem !important;
                 z-index: 999999 !important;
                 pointer-events: auto !important;
             }
@@ -104,9 +110,9 @@ def inject_css():
                 border: 1px solid rgba(99, 102, 241, 0.6) !important;
                 color: #ffffff !important;
                 border-radius: 10px !important;
-                padding: 6px 10px !important;
+                padding: 6px 12px !important;
                 backdrop-filter: blur(12px) !important;
-                box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35) !important;
+                box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4) !important;
                 transition: all 0.2s ease !important;
                 visibility: visible !important;
                 opacity: 1 !important;
